@@ -1,0 +1,6 @@
+.multi-col-box{
+    column-count: 3;
+    column-gap: 50px;
+    column-rule: 1px solid red; /* 보더와 같다 */
+
+}

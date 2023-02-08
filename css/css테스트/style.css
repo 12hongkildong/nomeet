@@ -1,0 +1,36 @@
+.test-box{
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+
+}
+.header{
+    background-color: green;
+    height: 50px
+}
+
+.body{
+    height: 300px;
+    background-color:blue;
+    display: flex;
+}
+    .aside{
+        background-color: aqua;
+        /* flex-shrink: 1; */
+        width: 250px;
+        height: 300px;
+        flex-shrink: 0;
+    }
+
+    .main{
+        background-color: yellow;
+        height: 300px;
+        flex-grow: 1;
+        order:-1;
+    }
+
+.footer{
+    background-color:gray;
+    height: 50px;
+
+}

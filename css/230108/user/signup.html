@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+
+
+    </header>
+    <section>
+        <h1>회원가입</h1>
+
+        <form action="signup">
+            <fieldset>
+                <legend>회원가입정보</legend>
+                <div>
+                    <label for="uid">아이디</label>
+                    <input type="text" name="uid" autofocus autocomplete="off">
+                    <output>유효한 아이디입니다.</output>
+                </div>
+                    <div>
+                    <label for="uemail">이메일</label>
+                    <input type="text" name="uemail">
+                </div>
+                <div>
+                    <label for="pwd">비밀번호</label>
+                    <input type="text" name="pwd" required>
+                </div>
+                <div>
+                    <label for="age">나이</label>
+                    <input name="pwd" required type="number" min="10" max="100">
+                </div>
+                <div>
+                    <label for="phone">전화번호</label>
+                    <input name="phone" required type="text" placeholder="대시(-) 포함 : 010-0000-0000" pattern="01[012678]-\d{3,4}-\d{4}">
+                </div>
+                <div>
+                    <label for="pwdcheck">비밀번호확인</label>
+                    <input type="text" name="pwdcheck">
+                </div>
+                <input type="text" name="hb2" list="hb2-list">
+                <datalist id="hb2-list">
+                    <option value="여행">
+                    <option value="여의도">
+                    <option value="여가생활">
+                </datalist>
+
+            </fieldset>
+            <fieldset>
+                <legend>가장 좋아하는 취미</legend>
+                <input type="radio" name="hobby" id="r" value="r">
+                <label for="r">독서</label>
+
+                <input type="radio" name="hobby" id="c" value="c">
+                <label for="c">등산</label>
+                
+                <input type="radio" name="hobby" id="s" value="s">
+                <label for="s">축구</label>
+
+            </fieldset>
+            <fieldset>
+                <legend>좋아하는 취미</legend>
+                <input type="checkbox" name="hb1" id="r" value="r">
+                <label for="r">독서</label>
+
+                <input type="checkbox" name="hb1" id="c" value="c">
+                <label for="c">등산</label>
+                
+                <input type="checkbox" name="hb1" id="s" value="s">
+                <label for="s">축구</label>
+                <select name="selectionhb">
+                    <option value="1">당구</option>
+                    <option value="2">야구</option>
+                    <option value="3">레슬링</option>
+                </select>
+
+                <select multiple name="selectionhb">
+                    <option value="1">당구</option>
+                    <option value="2">야구</option>
+                    <option value="3">레슬링</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>추가 된 태그</legend>
+                <label for="">가입일</label>
+                <input type="date" name="" id="">
+                <label for="">색상</label>
+                <input type="color" name="" id="">
+                <label for="">범위</label>
+                <input type="range" max="100" min="0" value="30"name="" id="">
+
+            </fieldset>
+                <div>
+                    <input type="submit" value="회원가입">
+                    <input type="button" value="회원가입">
+                    <button><img src="../img/딸기청.jpg" alt="청기딸"></button>
+                </div>
+
+
+
+        </form>
+    </section>
+
+
+</body>
+</html>

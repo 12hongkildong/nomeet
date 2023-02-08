@@ -1,0 +1,317 @@
+@import url(style.css);
+
+
+.header-cafe-bg-box{
+    background: #d4bfa0 url(../img/2.jpg) no-repeat left -245px top 0px / cover;
+
+}
+
+.header{
+    height: 50px ;
+    background-color: #0006;
+
+    /* layout */
+    position: sticky;
+    top: 0;
+    width: 100%;
+
+    /* item layout */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 15px;
+    box-sizing: border-box;
+}
+
+
+.cafe{
+    /* background-color: aqua; */
+    
+    height: 530px;
+
+    /* item layout */
+    display: flex;
+    flex-direction: column;
+}
+
+    .cafe-title{
+        margin-top: 23px;
+        margin-left: -14px;
+    }
+    .cafe-menu-all{
+        margin-top: auto;
+        align-self: end;
+        margin-right: 5px;
+    }
+
+    .cafe nav+div{
+        margin-top: 19px;
+
+    }
+
+
+
+.rland{
+    height: 530px;
+    overflow:scroll;
+    /* background-image: radial-gradient(circle farthest-side at 10px 100px, red 33%, blue 33% 66%, green 66% 100%); */
+    background-attachment: local;
+}
+
+.spot{
+    height: 350px;
+    background-color: rgba(255,0,0,0.6);
+    background: url(../img/b23.jpg) no-repeat center / cover;
+
+}
+.visited-review{
+
+}
+
+.blog{
+
+}
+
+.location{
+
+}
+
+.business-hour{
+
+}
+
+.footer{
+
+
+}
+
+
+/* ===== <content block> ===================================================== */
+.header-title{
+    display: inline-block;
+    color: white;
+    font-family: 'Segoe UI', "굴림", "돋움";
+    font-weight: normal;
+    font-size: 16px;
+}
+
+ .cafe-title{
+    /* 텍스트 스타일 */
+    font-family: 'Nanum Pen Script';
+    font-size:26px;
+    color:white;
+    font-weight:normal;
+    line-height: 45px;
+    text-align: center;
+
+    /* 콘텐츠 박스 스타일 */
+    background-color: rgba(0,0,0,0.29);
+    width: 248px;
+    height: 45x;
+    border-radius:0px 20px 20px 0px;
+}
+.top-menu{
+    padding: 31px 0px;
+    background-color: #fff6;
+}
+
+.top-menu ul{
+    margin: 0;
+    padding: 0;
+    
+    overflow: hidden;
+    display: flex;
+}
+.top-menu li{
+    flex-shrink: 0;
+    /* float: left; */
+    list-style-type: none;
+    width: 100px;
+    height: 100px;;
+    
+    margin-left: 20px ;
+}
+
+.top-menu li:first-child{
+    margin-left: 24px ;
+}
+
+.top-menu img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+}
+.top-menu  a{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+
+    /* top: 0%; */
+    /* margin-top: 0%; */
+    transition-duration: 1s;
+ 
+
+}
+.top-menu  li:hover>a{
+    position:relative;
+    transform: translateY(-100%);
+    /* top: -100%;
+    margin-top: -100%; */
+}
+
+/* -  rland item------------------------------------------------------------- */
+.rland article{
+    cursor: pointer;
+    display: grid; 
+    /* grid-template-columns: 100px 1fr;
+    grid-template-rows: 35px 65px; */
+    grid-template: 
+    "img title" 35px
+    "img content" 65px
+    / 100px 1fr;
+    column-gap: 20px;
+
+    padding: 10px 24px;
+
+    transition: backgruond 5s, opacity 1s, left 1s;
+
+    opacity:0.3;
+    position: relative;
+    left:-70%;
+
+}
+
+.rland article.get-in{
+    opacity:1;
+    left:0%;
+}
+
+
+.rland article:hover{
+    background-color: yellowgreen;
+
+}
+
+.rland article:nth-child(2n){
+    display: grid; 
+    /* grid-template-columns: 100px 1fr;
+    grid-template-rows: 35px 65px; */
+    grid-template: 
+    "title img" 35px
+    "content img" 65px
+    / 1fr 100px;
+    column-gap: 20px;
+}
+
+
+
+    .rland h1{
+        /*text */
+        font-family: 'Nanum Pen Script', cursive;
+        font-weight: normal;
+        align-self: center;
+        white-space: inherit; 
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .rland article>h1:first-child{
+        grid-area: title;
+
+    }
+        .rland article>div{
+            grid-area: img;
+            border-radius: 10px;
+        }
+
+        .rland article>div img{
+            width: 100%;
+            height: 100%;
+            object-fit: cov er;
+            border-radius: 20px 0px 0px 20px;
+            transition: 600ms;
+        }
+
+        
+        
+        .rland article:nth-child(2n)>div img{
+            width: 100%;
+            height: 100%;
+            object-fit: cov er;
+            border-radius: 0px 20px 20px 0px;
+        }
+        
+        .rland article:hover>div img{
+            border-radius: 0px 0px 0px 0px;
+
+        }
+
+        .rland>article>p{
+            font-family: 'Segoe UI';
+            font-size: 12x;
+             
+        }
+        .rland article>h1:last-child{
+            grid-area: content;
+
+        }
+    
+
+/* ===== <btn content> ===================================================== */
+.img-btn-menu{
+    background-image: url("data:image/svg+xml,%3Csvg width='48' height='20' viewBox='0 0 48 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline y1='2' x2='48' y2='2' stroke='black' stroke-width='4'/%3E%3Cline y1='10' x2='48' y2='10' stroke='black' stroke-width='4'/%3E%3Cline y1='18' x2='48' y2='18' stroke='black' stroke-width='4'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: left top;
+    display: inline-block;
+    width: 24px;
+    height: 20px;
+    overflow: hidden;
+    text-indent: -999px;
+}
+
+
+.btn-cafe-menu-all{
+    /* 텍스트 스타일 */
+    color: white;
+    line-height: 25px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Segoe UI';
+
+    /* 박스스타일 */
+    display: inline-block;
+    background-color: #d68814;
+    padding: 3px 14px;
+    border-radius: 10px 0px 10px 0px;
+
+}
+
+.btn-rland-location{
+    /* 텍스트 스타일링 */
+    color: white;
+    font-family: 'Segoe UI';
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    line-height: 40px;
+    
+    /* 박스스타일링 */
+    display: inline-block;
+    box-sizing: border-box;
+    width: 173px;
+    height: 40px;
+    padding-left: 40px;
+    background: rgba(100,152,9,0.6) url("data:image/svg+xml, %3Csvg width='50' height='87' viewBox='0 0 50 87' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M49.5 31C49.5 47.9505 38.4359 61.5 25 61.5C11.5641 61.5 0.5 47.9505 0.5 31C0.5 14.0495 11.5641 0.5 25 0.5C38.4359 0.5 49.5 14.0495 49.5 31Z' fill='%23D9D9D9' stroke='black'/%3E%3Cpath d='M28.5 20C28.5 22.1569 28.1165 24.0856 27.5168 25.4564C27.2166 26.1426 26.8721 26.6665 26.5148 27.0118C26.16 27.3549 25.8178 27.5 25.5 27.5C25.1822 27.5 24.84 27.3549 24.4852 27.0118C24.1279 26.6665 23.7834 26.1426 23.4832 25.4564C22.8835 24.0856 22.5 22.1569 22.5 20C22.5 17.8431 22.8835 15.9144 23.4832 14.5436C23.7834 13.8574 24.1279 13.3335 24.4852 12.9882C24.84 12.6451 25.1822 12.5 25.5 12.5C25.8178 12.5 26.16 12.6451 26.5148 12.9882C26.8721 13.3335 27.2166 13.8574 27.5168 14.5436C28.1165 15.9144 28.5 17.8431 28.5 20Z' fill='white' stroke='black'/%3E%3Cpath d='M45.8164 47L25 85.9394L4.18362 47L45.8164 47Z' fill='%23D9D9D9' stroke='black'/%3E%3Crect x='4' y='43' width='42' height='5' fill='%23D9D9D9'/%3E%3C/svg%3E") no-repeat center left 15px / contain;
+    background-size: 20px;
+
+
+}

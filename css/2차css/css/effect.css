@@ -1,0 +1,75 @@
+@keyframes rotate-out {
+    from{        /*0%{ 이렇게 쓸 수 잇음*/
+        
+    }
+    
+    20%{
+        height: 5px;   
+    }
+    40%{
+        transform: rotate(180deg);
+    }
+
+
+    to{          /*100% 쓸 수 잇음*/
+        height: 5px;
+        transform: rotate(360deg);
+
+
+    }
+}
+
+
+.s2 .container{
+    height: 200px;
+    background-color: gray;
+}
+.s2 .box{
+    transform: scaleY(0.1);
+    height: 50px;
+    width: 50px;
+
+    border-radius: 25px;
+    background-color: yellowgreen;
+}
+ 
+.s2 .container:hover .hand{
+    animation-name: rotate-out;
+    animation-duration: 1s;
+    /* animation-fill-mode: forwards; */
+}
+
+
+/*-----------------------------------------  */
+.s1 .container{
+    height: 200px;
+    background-color: gray;
+}
+
+.s1 .hand{
+    width: 50px;
+    height: 200px;
+    background-color: tomato;
+    margin-left: 200px;
+    /* transform: translateX(200px); */
+    transition: transform 5s steps(6, end);
+}
+
+.s1 .box{
+    height: 50px;
+    width: 50px;
+
+    background-color: yellowgreen;
+    /* transform:rotate(45deg); */
+    transition: width 1s, transform 5s;
+    border-radius: 50px;
+}
+ 
+.s1 .container:hover .hand{
+    transform:rotate(360deg);
+    transform-origin: 10 10;
+    transition-duration: ;
+    transition-property: ;
+    transition-timing-function: ;
+    transition-delay: ;
+}

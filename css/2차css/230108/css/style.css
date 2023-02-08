@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+    /* font-family: 'Nanum Pen Script', cursive; */
+/* ======= reset ================================= */
+
+body,
+h1,
+p{
+    margin:0;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+
+
+
+
+
+/* ======= utils ================================= */
+/* -------- display --------------------------------- */
+.d-none{
+    display: none;
+}
+.d-inline-block{
+    display: inline-block;
+}
