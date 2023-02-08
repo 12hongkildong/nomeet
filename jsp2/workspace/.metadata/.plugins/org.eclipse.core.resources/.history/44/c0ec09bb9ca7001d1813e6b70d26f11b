@@ -1,0 +1,42 @@
+package com.newlecture.web.poly;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Program {
+	
+	//@SuppressWarnings("uncheced")
+	public static void main(String[] args) {
+		
+		List list = new ArrayList();
+		list.add(new Exam(1,3,2));
+		list.add(new Exam(10,20,30));
+		list.add(new Exam(60,50,40));
+		list.add(new Exam(3,4,5));
+		//list.sort((x,y)->((Exam)y).getKor()-((Exam)x).getKor());
+		System.out.println(list);
+		
+		//ICTBanner banner = new ICTBanner();
+		// 매소드 내부 클래스
+		class AAA implements Banner {
+			@Override
+			public void print() {
+				System.out.println("네부클래스 ict교육센터");
+			}
+		}
+		//Exam.printIntro(new AAA());
+		
+		
+		// 익명클래스
+		Banner banner1 = new Banner() {
+			@Override
+			public void print() {
+			}
+		};
+		
+		ExamConsole.printIntro(()->{
+			System.out.println("람다식 익명클래스 ict교육센터");
+		});
+
+	}
+}
